@@ -1,0 +1,1 @@
+select first_name, last_name from employees  join (select DEPARTMENT_ID as id from departments where street_address like '%usa%' or where city like  '%usa%') as d on d.id=employees.DEPARTMENT_ID where MANAGER_ID is not NULL; 
